@@ -1,6 +1,6 @@
 ## NoteNote
 
-https://flask-notenote.herokuapp.com
+DEMO: <https://flask-notenote.herokuapp.com>
 
 NoteNote is a simple Flask Note Taking App built with modern material design concepts for modern browsers.
 
@@ -27,7 +27,7 @@ To Run The App Clone The Project
 cd NoteNote
 python server.py
 ```
-server will be running at address
+server will running at address
 ```
 https://0.0.0.0:5000/
 ```
