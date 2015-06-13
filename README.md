@@ -27,7 +27,7 @@ To Run The App Clone The Project
 cd NoteNote
 python server.py
 ```
-server will running at address
+server will be running at address
 ```
 https://0.0.0.0:5000/
 ```
