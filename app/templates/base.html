@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <title>NoteNote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="app">
+    <meta name="theme-color" content="#FFFFFF">
+
+
+    <!-- Place this data between the <head> tags of your website -->
+    <meta name="description" content="Describe your App" />
+
+    <!-- Twitter Card data -->
+
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta name="twitter:image" content="{{ static('img/image.jpg') }}">
+
+    <!-- Open Graph data -->
+
+
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ static('css/style.css') }}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ static('css/animate.min.css') }}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ static('css/materialize.min.css') }}" media="screen,projection"/>
+
+
+  </head>
+
+  <body>
+
+
+    <div class="navbar">
+    <nav>
+     <div class="nav-wrapper white">
+
+       <a  href="/" class="myclass black-text ">NoteNote</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu black-text"></i></a>
+
+       {% if passloginvar == 0 %}
+       <ul class="right hide-on-med-and-down">
+         <li><a href="/login" class="black-text">Login</a></li>
+       </ul>
+       {% else %}
+       <ul class="right hide-on-med-and-down">
+         <li><a href="/logout" class="black-text">Logout</a></li>
+       </ul>
+       {% endif %}
+
+
+       {% if passloginvar == 0 %}
+       <ul class="side-nav" id="mobile-demo">
+         <li><a href="/login" class="black-text">Login</a></li>
+      </ul>
+       {% else %}
+       <ul class="side-nav" id="mobile-demo">
+         <li><a href="/logout" class="black-text">Logout</a></li>
+      </ul>
+       {% endif %}
+     </div>
+    </nav>
+    </div>
+
+    {% block body %}{% endblock %}
+    <footer class="page-footer white">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">NoteNote</h5>
+                <p class="black-text">NoteNote is simple note taking App.</p>
+              </div>
+              <!-- <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="black-text" href="#!">Link 1</a></li>
+                  <li><a class="black-text" href="#!">Link 2</a></li>
+                  <li><a class="black-text" href="#!">Link 3</a></li>
+                  <li><a class="black-text" href="#!">Link 4</a></li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container black-text ">
+            © 2014 Copyright John Thachil
+            </div>
+          </div>
+        </footer>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>!window.jQuery && document.write("{{ static('js/jquery-2.1.3.min.js') }}")</script>
+    <script src="{{ static('js/materialize.min.js') }}"></script>
+
+
+    <script src="{{ static('js/init.js') }}"></script>
+
+    <script src="{{ static('js/scroll.js') }}"></script>
+
+
+
+
+  </body>
+</html>

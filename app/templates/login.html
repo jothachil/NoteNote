@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+
+
+
+
+  <div class="section no-pad-bot blue darken-4" id="index-banner">
+    <br><br>
+    <br><br>
+
+
+    <div class="container">
+      <h3 class="passhead white-text ">Enter Credential</h3>
+      <div class="row">
+      <div class="col s12">
+        <div class="card-panel white">
+          <div class="row">
+            <form class="col s12"  method="post">
+             <div class="row">
+               <div class="input-field col s12">
+                 <i class="mdi-action-account-circle prefix"></i>
+                 <input id="email" type="email" name="email" value="{{request.form.email}}" class="validate">
+                 <label for="email">Email</label>
+               </div>
+               <div class="input-field col s12">
+                 <i class="mdi-action-lock-outline prefix"></i>
+                 <input id="password" type="password" value="{{request.form.password}}" name="password" class="validate">
+                 <label for="password">Password..</label>
+                 <br><br>
+
+
+                 <span style="display:inline-block; width: 40px;"></span>
+
+                 <button class="btn waves-effect waves-red grey darken-1" type="submit" >Submit
+                   <i class="mdi-content-send right"></i>
+               </button>
+               {% if error1 %}
+
+                 <p class="center-align red-text animated shake">{{error1}}</p>
+               {% endif %}
+
+               </div>
+             </div>
+           </form>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+  </div>
+
+
+
+
+{% endblock %}

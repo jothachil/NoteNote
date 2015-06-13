@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+  <nav class="grey lighten-5" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="black-text" style="font-size: 20px; text-decoration: none" >Intelligent APP</a>
+      <ul class="right">
+        <li><a href="#" class="black-text" >Search</a></li>
+        <li><a href="#PRODUCT" class="black-text" >Product</a></li>
+
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#search" class="black-text" >Search</a></li>
+        <li><a href="#PRODUCT" class="black-text" >Product</a></li>
+
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse black-text"><i class="mdi-navigation-menu"></i></a>
+    </div>
+
+  </nav>
+
+
+
+  <div class="section no-pad-bot blue darken-4" id="index-banner">
+    <br><br>
+
+    <div class="container">
+      <div class="row">
+      <div class="col s6 offset-s3">
+        <div class="card-panel white">
+          <div class="row">
+            <form class="col s12" onsubmit="return validateForm()" name="myForm" method="post" action="{{ url_for('result') }}">
+             <div class="row">
+               <div class="input-field col s12">
+                 <i class="mdi-action-account-circle prefix"></i>
+                 <input id="email" type="email" class="validate">
+                 <label for="email">Email</label>
+               </div>
+               <div class="input-field col s12">
+                 <i class="mdi-action-lock-outline prefix"></i>
+                 <input id="password" type="password" class="validate">
+                 <label for="password">Password</label>
+                 <br><br>
+                 <!-- <span style="display:inline-block; width: 80px;"></span> -->
+
+                 <button class="btn waves-effect waves-red black" type="submit" >Submit
+                   <i class="mdi-content-send right"></i>
+               </button>
+
+               </div>
+             </div>
+           </form>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <br><br>
+
+  </div>
+
+
+<h3>{{fin}}</h3>
+
+
+<!--   Modal Section   -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4><i class="mdi-alert-error"></i></h4>
+    <h4>Alert</h4>
+
+    <p>Please Enter A Valid Query And Check Source</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Agree</a>
+  </div>
+</div>
+
+<!--   Modal END   -->
+
+
+
+<div id="PRODUCT" class="white">
+<div class="container ">
+    <div class="section">
+
+
+
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Warning</h4>
+            <p>Please Enter A Valid Query And Check Source</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Agree</a>
+          </div>
+        </div>
+
+
+
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="mdi-image-flash-on"></i></h2>
+            <h5 class="center">Fast</h5>
+
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="mdi-social-group"></i></h2>
+            <h5 class="center">UI Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="mdi-action-settings"></i></h2>
+            <h5 class="center">Easy</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+
+  </div>
+    </div>
+
+
+
+    <div class="fixed-action-btn" style="bottom: px; right:35px;">
+  <a href="#search" class="btn-floating btn-large red">
+    <i class="large mdi-editor-mode-edit"></i>
+  </a>
+
+</div>
+
+
+
+
+  <footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">John,Ashith,Aravind</a>
+      </div>
+    </div>
+  </footer>
+
+{% endblock %}

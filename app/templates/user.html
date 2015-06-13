@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+
+  <div class="section no-pad-bot blue darken-4" id="index-banner">
+    <br><br>
+    <br><br>
+
+    <div class="container">
+      {% if posts1 %}
+        <h3 class="passhead white-text animated fadeIn">Notes</h3>
+      {% else %}
+        <h3 class="passhead white-text ">No Notes</h3>
+        <div class="row">
+          <p class="passhead white-text ">Click Below To Add Note</p>
+        </div>
+      {% endif  %}
+
+      {% for post in posts1 %}
+      <div class="col s6 animated fadeIn">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title black-text">{{post.note_title}}</span>
+            <p>{{post.note_content}}</p>
+          </div>
+          <div class="card-action">
+            <a href="/notes/{{post.noteid}}">Delete Note</a>
+            <a href="/edits/{{post.noteid}}">Edit Note</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+              <br><br>
+
+              <span style="display:inline-block; width: 380px;"></span>
+              <a  href="/addstudent" class="btn-floating btn-large waves-effect tooltipped waves-light white" data-position="bottom" data-delay="50" data-tooltip="Add New Note"><i class="mdi-content-add red-text"></i></a>
+
+
+
+    </div>
+
+
+
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+
+  </div>
+
+
+
+{% endblock %}
