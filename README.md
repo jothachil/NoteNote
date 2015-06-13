@@ -30,6 +30,8 @@ python server.py
 server will running at address
 ```
 https://0.0.0.0:5000/
+Email:admin@gmail.com
+Pass :admin
 ```
 
 ## License
